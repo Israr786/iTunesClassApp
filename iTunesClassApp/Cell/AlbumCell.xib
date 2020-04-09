@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="80" id="ACx-I0-aHo" customClass="AlbumCell" customModule="iTunesClassApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ACx-I0-aHo" id="8Fx-7F-SQO">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbumPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="ohO-4i-gbE">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Blk-zw-T4B"/>
+                            <constraint firstAttribute="height" constant="80" id="bbM-y9-fTV"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ju4-XK-kk7">
+                        <rect key="frame" x="88" y="9" width="87" height="62.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP3-FU-CRO">
+                                <rect key="frame" x="0.0" y="0.0" width="87" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCW-vQ-h7M">
+                                <rect key="frame" x="0.0" y="24.5" width="39" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 01, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heG-JA-mok">
+                                <rect key="frame" x="0.0" y="45.5" width="80.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JS-qQ-9Gq">
+                        <rect key="frame" x="372" y="20" width="22" height="40"/>
+                        <state key="normal" image="star" catalog="system"/>
+                        <connections>
+                            <action selector="cellButtonTapped:" destination="ACx-I0-aHo" eventType="touchUpInside" id="aqu-Y5-2rN"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2JS-qQ-9Gq" firstAttribute="top" secondItem="8Fx-7F-SQO" secondAttribute="top" constant="20" id="2bO-Xz-rQu"/>
+                    <constraint firstItem="ohO-4i-gbE" firstAttribute="leading" secondItem="8Fx-7F-SQO" secondAttribute="leading" id="3wA-tb-dnq"/>
+                    <constraint firstItem="ohO-4i-gbE" firstAttribute="top" secondItem="8Fx-7F-SQO" secondAttribute="top" id="H0k-xb-wX4"/>
+                    <constraint firstAttribute="bottom" secondItem="2JS-qQ-9Gq" secondAttribute="bottom" constant="20" id="KFY-xP-ozi"/>
+                    <constraint firstAttribute="trailing" secondItem="2JS-qQ-9Gq" secondAttribute="trailing" constant="20" id="QsB-OR-Eht"/>
+                    <constraint firstItem="Ju4-XK-kk7" firstAttribute="leading" secondItem="ohO-4i-gbE" secondAttribute="trailing" constant="8" id="afd-1z-PtK"/>
+                    <constraint firstItem="Ju4-XK-kk7" firstAttribute="centerY" secondItem="8Fx-7F-SQO" secondAttribute="centerY" id="oxL-tK-npe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumTitleLabel" destination="aP3-FU-CRO" id="3lV-5d-uFo"/>
+                <outlet property="artworkView" destination="ohO-4i-gbE" id="61I-aZ-lnn"/>
+                <outlet property="genreLabel" destination="wCW-vQ-h7M" id="5iQ-py-I3C"/>
+                <outlet property="releaseDateLabel" destination="heG-JA-mok" id="RZy-6Y-Qmj"/>
+                <outlet property="starButton" destination="2JS-qQ-9Gq" id="BU8-q5-x2K"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="34"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="AlbumPlaceholder" width="128" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>

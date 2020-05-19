@@ -22,6 +22,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.searchController = searchController
+        navigationItem.title = "Songs"
         searchController.searchBar.placeholder = "search artist or songs"
         searchController.searchBar.delegate = self
         tableView.delegate = self
@@ -30,7 +31,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     }
     
     func fetchData(searchTerm: String) {
-        
         ContentService().fetchUsers(withTerm: searchTerm) { [weak self] (result)  in
             guard let strongSelf = self else { return }
             guard case .success(let data) = result else { return }
@@ -42,7 +42,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UISearchBarDel
                 self?.tableView.reloadData()
             }
         }
-       
     }
             
     func createGroupedAlbums(albums: [Artist]) -> [[Artist]] {

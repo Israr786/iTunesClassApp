@@ -15,7 +15,7 @@ class SecondViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Favourite Song"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "FavAlbumCell", bundle: nil), forCellReuseIdentifier: "FavAlbumCell")

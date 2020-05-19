@@ -28,6 +28,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UISearchBarDel
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "AlbumCell", bundle: nil), forCellReuseIdentifier: "AlbumCell")
+        fetchData(searchTerm: "Katy Perry")
+        
     }
     
     func fetchData(searchTerm: String) {
